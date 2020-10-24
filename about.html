@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>NINA RODRIGUEZ.</title>
+	<title>Rafael Macalara.</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Riddle - Portfolio Template">
-	<meta name="keywords" content="portfolio, Nina Rodriguez, onepage, creative, html">
+	<meta name="description" content="Rafael Maclara Brinzen Photography">
+	<meta name="keywords" content="portfolio, Rafael Maclara, photography, portrait, headshots, general, gallery">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->   
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179689699-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-179689699-1');
-	</script>
-
 	<!-- CSS/JS -->
 	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="js/all.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
 	<!-- My CSS/JS Files -->
 	<script type="text/javascript" src="js/main.js"></script>
@@ -40,33 +32,60 @@
 	<!-- Header start -->
 	<header>
 		<nav>
-            <ul class="navbar-menu">
-                <li class="navbar-top">
-                    <div class="navbar-top-logo">
-                        <a href="index.html">
-                        	<div>N &nbsp; I &nbsp; N &nbsp; A</div>
-                        	<div>RODRIGUEZ.</div>
-	                    </a>
-                    </div>
+    		<div class="header-desktop-nav">
+        		<a class="header-link header-logo" href="index.html">
+                	<div>RAFAEL</div>
+                	<div>MACLARA.</div>
+                </a>
+                <a class="header-desktop-nav-item header-link" href="index.html">HOME</a>
+                <div class="header-desktop-nav-item header-link link desktop-submenu">
+                	<div class="submenu-trigger">GALLERY <i class="plus fas fa-plus"></i></div>
+                	<div style="display:none;" class="header-nav-submenu">
+	                	<a href="portraits.html">Portraits</a>
+	                	<a href="headshots.html">Headshots</a>
+	                	<a href="general.html">General</a>
+	                </div>
+                </div>
+                <a class="header-desktop-nav-item header-link" href="about.html">ABOUT</a>
+                <a class="header-desktop-nav-item header-link" href="contact.html">CONTACT</a>
+            </div>
 
-                    <div class="navbar-top-mobile-toggle">
-                        <a href="#"> <i class="fas fa-bars"></i> </a>
-                    </div>
-                </li>
+            <div class="header-mobile-nav">
+            	<a class="header-link header-logo" href="index.html">
+            		<div>RAFAEL</div>
+                	<div>MACLARA.</div>
+            	</a>
+                <button onClick="openModal()" class="mobile-trigger">
+                	<i class="fas fa-bars"></i>
+                </button>
+            </div>
 
-                <li class="navbar-menu-item">
-                    <a href="index.html">HOME</a>
-                </li>
-                <li class="navbar-menu-item">
-                    <a href="work.html">WORK</a>
-                </li>
-                <li class="navbar-menu-item">
-                    <a href="about.html">ABOUT</a>
-                </li>
-                <li class="navbar-menu-item">
-                    <a href="contact.html">CONTACT</a>
-                </li>
-            </ul>
+            <div class="header-mobile-modal">
+            	<div class="header-mobile-modal-left">
+                	<button onClick="closeModal()" class="mobile-close">
+                		<i class="fas fa-times"></i>
+                	</button>
+            	</div>
+            	<div class="header-mobile-modal-right">
+            		<a class="modal-link header-mobile-modal-right-logo" href="index.html">
+	            		<h3>RAFAEL</h3>
+	                	<h3>MACLARA.</h3>
+	            	</a>
+	            	<div class="header-modal-menu">
+	            		<a class="modal-link header-mobile-modal-right-link" href="index.html">HOME</a>
+	            		<div class="modal-link header-mobile-modal-right-link link mobile-submenu">
+		                	<div class="submenu-mobile-trigger">GALLERY <i class="mobile-plus fas fa-plus"></i></div>
+		                	<div style="display:none;" class="header-mobile-nav-submenu">
+			                	<a href="portraits.html">Portraits</a>
+			                	<a href="headshots.html">Headshots</a>
+			                	<a href="general.html">General</a>
+			                </div>
+		                </div>
+		                <a class="modal-link header-mobile-modal-right-link" href="about.html">ABOUT</a>
+		                <a class="modal-link header-mobile-modal-right-link" href="contact.html">CONTACT</a>
+		            </div>
+                </div>
+            </div>
         </nav>
     </header>
 	<!-- Header end -->
@@ -74,23 +93,24 @@
 	<!-- Bio section -->
 	<section class="about">
 		<div class="about-intro">
-			<p class="light-text"> I’m a <span class="dark-text">model, actress, singer, dancer, artist, writer,</span> with 7+ years of experience </p>
+			<p class="light-text"> I’m a freelance <span class="dark-text">photographer,</span> with 2+ years of experience </p>
 		</div>
 
 		<div class="about-bio">
 			<div class="about-bio-left">
-				<p class="light-text" style="text-align: justify;">
-					A Harlem born Latina, <span class="dark-text">Nina Rodriguez</span> is a model and actress working predominantly in the NYC area. She started modeling because she wanted to push a lane for woman like herself. She has worked with incredible artists of all mediums. Shooting a large range of work, from commercial print, beauty, and editorial work. Nina is breaking barriers getting consistent work with brands such as Champion, L’Oréal , Samsung, Makeup Forever, and SteadfastMagazine to name a few. When she’s not working she’s being creative in other ways, whether it’s painting, or writing.
-				</p>
-				<div class="about-bio-left-nums light-text">
-					<p> <span class="about-bio-left-nums-num">45+</span> Clients</p>
-					<p> <span class="about-bio-left-nums-num">100+</span> Projects</p>
-					<p> <span class="about-bio-left-nums-num">25+</span> Collabs</p>
+				<div class="light-text snapshot-text" style="text-align: justify;">
+					<p>
+						This is some random text. Living valley had silent eat merits esteem bed. In last an or went wise as left. Visited civilly am demesne so colonel he calling. So unreserved do interested increasing sentiments. Vanity day giving points within six not law. Few impression difficulty his use has comparison decisively. Excited him now natural saw passage offices you minuter. At by asked being court hopes. Farther so friends am to detract. Forbade concern do private be. Offending residence but men engrossed shy. Pretend am earnest offered arrived company so on. Felicity informed yet had admitted strictly how you. Style too own civil out along. Perfectly offending attempted add arranging age gentleman concluded. Get who uncommonly our expression ten increasing considered occasional travelling. Ever read tell year give may men call its. Piqued son turned fat income played end wicket. To do noisy downs round an happy books.
+					</p>
+
+					<div class="top-left-border"></div>
+					<div class="top-right-border"></div>
+					<div class="bottom-left-border"></div>
+					<div class="bottom-right-border"></div>
 				</div>
 			</div>
 			<div class="about-bio-right">
 				<img src="img/about.jpg" alt="" />
-				<div class="about-bio-right-img-border"></div>
 			</div>
 		</div>
 	</section>
@@ -99,14 +119,13 @@
 	<!-- FOOTER -->
 	<footer>
 		<div class="footer-nav">
-			<h1 style="margin-bottom: 20px;">Let's work together</h1>
 			<!-- Footer Contact Button -->
             <div class="footer-contact-btn">
                 <a class="btn btn-outline-light mx-1" href="contact.html">Contact Me</a>
             </div>
             <!-- Footer Social Icons-->
             <div class="social-media">
-                <a href="https://www.instagram.com/nina.is.on/" target="_blank">
+                <a href="https://www.instagram.com/brinzenphotography/" target="_blank">
                     <i class="fab fa-fw fa-instagram"></i>
                 </a>
             </div>
